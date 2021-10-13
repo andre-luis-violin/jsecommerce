@@ -3,10 +3,11 @@
 :root {
   --main-bg-color: #ffe6eb;
   --second-bg-color: #0e0220;
+  --third-bg-color: #ffebf0;
 
   --main-font-color: #0e0220;
   --second-font-color: #ffe6eb;
-  --third-font-color: #eaf6f6;
+  --third-font-color: #3a3246;
 
 }
 
@@ -26,6 +27,11 @@ body {
   font-weight: 400;
   position: relative;
   z-index: 1;
+}
+
+a {
+  color: var(--main-font-color);
+  text-decoration: none;
 }
 
 .grid-container {
@@ -58,6 +64,49 @@ header a {
 
 .brand a {
   font-size: 3rem;
+}
+
+/* Products */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.products li {
+  margin: 3rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  background-color: var(--third-bg-color);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.product img {
+  max-height: 26rem;
+}
+
+.product-name {
+  line-height: 2.2rem;
+}
+
+.product-brand {
+  font-size: 1.2rem;
+  color: var(--third-font-color);
+}
+
+.product-price {
+  font-size: 2rem;
 }
 
 footer {
