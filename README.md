@@ -10,3 +10,11 @@
    7. JSON: adicione o comando start como live-server src --verbose
    8. TERMINAL: execute npm start
    9. verificar o resultado
+
+2. Design básico do site
+   1. CSS: criar style.css
+   2. HTML: vincule style.css a index.html
+   3. HTML: criar div.grid-container
+   4. HTML: criar header, main e footer
+   5. CSS: estilizar html, body
+   6. CSS: estilizar .grid-container, header, main e footer
