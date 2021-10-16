@@ -9,8 +9,8 @@ const HomeScreen = {
         (product) => `
         <li>
           <div class="product">
-            <a href="/#/product/${product.id}">
-              <img src="../public/${product.image}" alt="${product.name}" />
+            <a href="/#/product/${product._id}">
+              <img src="./${product.image}" alt="${product.name}" />
             </a>
             <div class="product-name">
               <a href="/#/product/3">

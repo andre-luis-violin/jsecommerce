@@ -42,3 +42,14 @@
    12. JS: defina main_container innerHTML para HomeScreen.render ()
    13. JS: definir o evento load do objeto window para a função do router()
 
+6. Construir roteador de URL
+   1. JS: criar rotas como rota: objeto de tela para tela inicial
+   2. JS: criar utils.js
+   3. JS: export parseRequestURL()
+   4. JS: definir url como endereço hash dividido por barra
+   5. JS: recurso de retorno, id e verbo do url
+   6. JS: atualizar router()
+   7. JS: definir a solicitação como parseRequestURL()
+   8. JS: construir parsedUrl e comparar com rotas
+   9. JS: se a rota existe, renderiza-a, senão renderiza Error404
+   10. JS: criar telas / Error404.js e renderizar mensagem de erro
