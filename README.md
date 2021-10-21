@@ -42,7 +42,7 @@
    12. JS: defina main_container innerHTML para HomeScreen.render ()
    13. JS: definir o evento load do objeto window para a função do router()
 
-6. Construir roteador de URL
+5. Construir roteador de URL
    1. JS: criar rotas como rota: objeto de tela para tela inicial
    2. JS: criar utils.js
    3. JS: export parseRequestURL()
@@ -53,3 +53,16 @@
    8. JS: construir parsedUrl e comparar com rotas
    9. JS: se a rota existe, renderiza-a, senão renderiza Error404
    10. JS: criar telas / Error404.js e renderizar mensagem de erro
+
+6. Criar servidor Node.JS
+   1. Criar a pasta jsecommerce/backend
+   2. TERMINAL: cd backend
+   3. TERMINAL: execute npm init na pasta raiz jsecommerce/backend
+   4. TERMINAL: npm install express
+   5. criar backend/server.js
+   6. JSON: adicione o comando start como node server.js em package.json
+   7. JS: require express
+   8. mover data.js de /frontend para /backend
+   9. JS: criar rota para /api/produtcs
+   10. JS: retornar produtcs em data.js
+   11. TERMINAL: execute npm start
