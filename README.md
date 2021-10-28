@@ -66,3 +66,32 @@
    9. JS: criar rota para /api/produtcs
    10. JS: retornar produtcs em data.js
    11. TERMINAL: execute npm start
+
+7. Carregar produtos do back-end
+   1. JS: editar HomeScreen.js
+   2. tornar a renderização de HomeScreen.js assíncrona
+   3. buscar produtos de '/api/produtcs' em render()
+   4. tornar o route() assíncrono e aguardar a chamada HomeScreen.render()
+   5. usar cors no backend
+   6. verifique o resultado
+
+8. Adicionar Webpack
+   1. TERMINAL: cd frontend
+   2. TERMINAL: npm install -D webpack webpack-cli webpack-dev-server
+   3. TERMINAL: npm uninstall live-server
+   4. JSON: "start": "webpack serve --mode development --open"
+   5. mover index.html, style.css e imagens para a pasta frontend/public
+   6. renomear app.js para index.js
+   7. HTML: atualizar index.html
+   8. HTML: adicione o <script src="main.js" defer></script>
+   9. TERMINAL: npm start
+   10. TERMINAL: npm install axios
+   11. JS: alterar fetch para axios na HomeScreen.js
+
+9. Instalação Babel para usar a sintaxe do ES6
+   1.  TERMINAL: npm install -D babel core cli node preset-env
+   2.  Crie .babelrc e configure as predefinições para @babel/preset-env
+   3.  TERMIAL: npm install -D nodemon
+   4.  JSON: Defna o script "start": "nodemon --watch --exec babel-node server.js"
+   5.  JS: converter *require* para *import* em server.js
+   6.  TERMINAL: npm start
