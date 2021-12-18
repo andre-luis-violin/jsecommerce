@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
   --main-bg-color: #dfdedc;
@@ -8,6 +8,23 @@
   --main-font-color: #525644;
   --second-font-color: #dfdedc;
   --third-font-color: #9b998d;
+
+  --shadow-color: 74deg 15% 16%;
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+    1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+  --shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+    0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+    1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+    2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+    4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+    7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+    11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+    17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+    25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 * {
@@ -20,7 +37,7 @@ html {
 
 body {
   height: 100vh;
-  font: 1.6rem "Mukta", sans-serif;
+  font: 1.6rem 'Mukta', sans-serif;
   margin: 0;
   font-weight: 400;
   position: relative;
@@ -32,30 +49,72 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+}
+
+input,
+button {
+  font: 1.6rem 'Mukta';
+  padding: 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  /* box-shadow: var(--shadow-elevation-low); */
+}
+
+input:hover,
+button:hover {
+  box-shadow: var(--shadow-elevation-medium);
+}
+
+button.primary {
+  background: var(--second-bg-color);
+  color: var(--second-font-color);
+}
+
+.fw {
+  width: 100%;
+}
+
+.success {
+  color: #40c040;
+}
+
+.error {
+  color: #c04040;
+}
+
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    'header'
+    'main'
+    'footer';
   grid-template-columns: 1fr;
   grid-template-rows: 8rem 1fr 8rem;
-  height: 100%;
+  min-height: 100%;
   background-color: var(--main-bg-color);
   color: var(--main-font-color);
 }
 
 header {
   grid-area: header;
-  color: var(--main-font-color);
+  position: sticky;
+  left: 0;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
+  background: rgba(82, 86, 68, 1);
 }
 
 header a {
-  color: var(--main-font-color);
+  color: var(--second-font-color);
   font-weight: bold;
   text-decoration: none;
 }
@@ -124,4 +183,74 @@ footer {
 .rating span:last-child {
   color: var(--third-font-color);
   font-size: 1.2rem;
+}
+
+.content {
+  padding: 1rem;
+}
+/* Product Details */
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.details-image {
+  flex: 2 1 60rem;
+}
+
+.details-image img {
+  max-width: 60rem;
+  width: 100%;
+}
+
+.details-info,
+.details-action {
+  flex: 1 1 30rem;
+}
+
+.details-info h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.details-info div,
+.details-action div {
+  margin-bottom: 1rem;
+}
+
+.details-action {
+  border: 0.1rem #525644 solid;
+  border-radius: 0.5rem;
+  background: #d6dac7;
+  padding: 1rem;
+}
+
+/* FORM */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-itens {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 34em;
+  border: 0.05rem #d6dac7 solid;
+  border-radius: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.title-form {
+  font-size: 2.5rem;
 }
