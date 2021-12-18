@@ -95,3 +95,33 @@
    4.  JSON: Defna o script "start": "nodemon --watch --exec babel-node server.js"
    5.  JS: converter *require* para *import* em server.js
    6.  TERMINAL: npm start
+
+10. Habilitar Code Linting
+    1.  TERMINAL: npm install -D eslint
+    2.  EXTENSÃO: instalar extensão eslint no VSCode
+    3.  criar o arquivo .eslintrc.js e definir module.exports e configurar
+    4.  ESLINT: Defina a configuração VSCode (JSON) para editor.codeActionsOnSave e source.fixAll.eslint como true
+    5.  verificar o resultado para erro de linting
+    6.  TERMINAL: npm install -D eslint-config-airbnb-base eslint-plugin-import
+    7.  ESLINT: configurar extends para usar airbnb-base
+    8.  ESLINT: definir parserOptions como ecmaVersion 11 e sourceType como module
+    9.  ESLINT: definir regras para no-console como 0 para ignorar o erro de linting
+
+11. Install VSCode Extension
+    1.  JavaScript (ES6) code snippets
+    2.  ES7 React/Redux/GraphQL/React-Native snippets
+    3.  Prettier - Code formatter
+        1.  Ajustar eslint extends para utilizar o prettier
+    4.  HTML&LESS grammar injections
+
+12. Criar Componente de Classificação
+    1.  FRONT-END: criar components/Rating.js
+    2.  HTML: link para fontawesome.css em index.html
+    3.  criar div.rating
+    4.  definir objeto Rating com render ()
+    5.  if! props.value return vazio div
+    6.  então use fa fa-star, fa-star-half-o e fa-star-o
+    7.  último período para props.text || ''
+    8.  estilo div.rating, span e último span
+    9.  Editar tela inicial
+    10. Adicione div.product-rating e use o componente Rating

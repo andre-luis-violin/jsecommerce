@@ -1,16 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-  --main-bg-color: #DFDEDC;
+  --main-bg-color: #dfdedc;
   --second-bg-color: #525644;
-  --third-bg-color: #EFEDEE;
+  --third-bg-color: #efedee;
 
   --main-font-color: #525644;
-  --second-font-color: #DFDEDC;
-  --third-font-color: #9B998D;
-
+  --second-font-color: #dfdedc;
+  --third-font-color: #9b998d;
 }
-
 
 * {
   box-sizing: border-box;
@@ -22,7 +20,7 @@ html {
 
 body {
   height: 100vh;
-  font: 1.6rem 'Mukta', sans-serif;
+  font: 1.6rem "Mukta", sans-serif;
   margin: 0;
   font-weight: 400;
   position: relative;
@@ -36,10 +34,10 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-areas: 
-    'header'
-    'main'
-    'footer';
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 8rem 1fr 8rem;
   height: 100%;
@@ -115,4 +113,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Rating */
+.rating {
+  color: var(--second-bg-color);
+  font-size: 1.4rem;
+}
+
+.rating span:last-child {
+  color: var(--third-font-color);
+  font-size: 1.2rem;
 }
